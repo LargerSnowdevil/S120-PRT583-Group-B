@@ -1,0 +1,25 @@
+public class Calculator {
+	int answer;
+	
+	public Calculator() {	}
+	
+	public int doOperation(int firstNum, String operation, int secondNum) {
+		if(operation == '+') {
+			answer = firstNum + secondNum;
+		}
+		else if(operation == '-') {
+			answer = firstNum - secondNum;
+		}
+		else if(operation == '*') {
+			answer = firstNum * secondNum;
+		}
+		else if(operation == '/') {
+			answer = firstNum / secondNum;
+		}
+		else {
+			System.out.println("Error")
+		}
+		return answer;
+	}
+
+}

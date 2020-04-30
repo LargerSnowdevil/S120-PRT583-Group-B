@@ -1,0 +1,25 @@
+//Assume all set values are from parsed user input
+
+public static void Main() {
+	Calculator calc = new Calculator();
+	
+	calc.doOperation(10, '+', 5);
+	system.out.println(calc.getLastEquation);
+	
+	calc.doOperation(calc.getLastAnswer(), '+', 20);
+	system.out.println(calc.getLastEquation);
+	
+	calc.doOperation(calc.getLastAnswer(), '-', 10);
+	system.out.println(calc.getLastEquation);
+	
+	calc.doOperation(calc.undo, '/', 10);
+	system.out.println(calc.getLastEquation);
+	
+	ArrayList history = calc.getHistory();
+	int i = 0;
+	
+	while (i < history.size()) {
+		system.out.println(history.get(i));
+		i++;
+	}
+}

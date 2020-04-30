@@ -1,0 +1,21 @@
+public class Memento {
+	private int answer;
+	private int firstNum;
+	private int secondNum;
+	private String operation;
+
+	public Memento(int firstNum, int secondNum, int answer, String operation) {
+		this.firstNum = firstNum;
+		this.secondNum = secondNum;
+		this.answer = answer;
+		this.operation = operation;
+	}
+
+	public int getAnswer() {
+		return answer;
+	}
+	public getEquation() {
+		String returnString = firstNum.toString() + " " + operation + " " + secondNum.toString() + " = " + answer.toString();
+		return returnString;
+	}
+}
