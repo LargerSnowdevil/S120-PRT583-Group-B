@@ -1,0 +1,14 @@
+Class pizzaConstructor {
+
+      pizza(base,sauce,cheese,pepperoni,beef,pineapple,jalapeno,anchovies){
+            self.base = base
+            self.sauce = sauce
+            self.cheese = cheese
+            self.pepperoni = pepperoni
+            self.Beef = beef
+            self.pineapple = pineapple
+            self.jalapeno = jalapeno
+            self.anchovies = anchovies
+      }
+}
+new pizza = pizzaConstructor (base=yes,cheese=yes,beef=yes,pepperoni=no,pineapple=no,jalapeno=yes,anchovies=no)

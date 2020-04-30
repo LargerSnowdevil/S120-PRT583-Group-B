@@ -1,0 +1,58 @@
+class pizza {
+        addBase(base){
+                self.base =  base
+                return self.base
+        }
+        addSauce(Sauce){
+                self.Sauce = Sauce
+                return self.Sauce
+        }
+        addcheese(cheese){
+                self.cheese = cheese
+                return self.cheese
+        }
+        addpepperoni(pepperoni){
+                self.pepperoni= pepperoni
+                return self.pepperoni
+        }
+        addbeef(beef){
+                self.beef= beef
+                return self.beef
+        }
+        addpineapple(pineapple){
+                self.pineapple= pineapple
+                return self.pineapple
+        }
+        addjalapeno(jalapeno){
+                self.jalapeno = jalapeno
+                return self.jalapeno
+        }
+        addanchovies(anchovies){
+                self.anchovies = anchovies
+                return self.anchovies
+        }
+
+        pizzaBuilder(){
+              pizza.base = self.base
+              pizza.sauce = self.sauce
+              pizza.cheese = self.cheese
+              pizza.pepperoni = self.pepperoni
+              pizza.beef = self.beef
+              pizza.pineapple = self.pineapple
+              pizza.jalapeno = self.jalapeno
+              pizza.anchovies = self.anchovies
+        }
+}
+
+
+#create a pizza
+
+newPizza = pizza.pizzaBuilder()
+            .addbase(deep Pan)
+            .addsauce(Tomato)
+            .addcheese(Normal)
+            .addpepperoni(Yes)
+            .addbeef(no)
+            .addpineapple(no)
+            .addjalapeno(no)
+            .addanchovies(yes)
