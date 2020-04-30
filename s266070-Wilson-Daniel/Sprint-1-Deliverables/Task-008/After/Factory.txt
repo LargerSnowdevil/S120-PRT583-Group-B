@@ -1,0 +1,13 @@
+public class Factory {
+  private static final HashMap<Color, Square> squareStorage = new HashMap<Color, Square>();
+
+  public static Square getSquare(Color color) {
+    Square square = squareStorage.get(color);
+
+    if (square == null) {
+      square = new Square(color);
+      squareStorage.put(color, square);
+    }
+    return square
+  }
+}

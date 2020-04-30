@@ -1,0 +1,20 @@
+public static Main() {
+	Color[] colors = {Color.red, Color.blue, Color.green, Color.yellow, Color.purple};
+
+	//create a window to draw in
+
+	Graphics graphic = panelName.getGraphics();
+	int i = 0;
+	while (i < 10000) {
+		int x = getRandom(windowWidth);
+		ing y = getRandom(windowHeight);
+
+		graphic.setColor(colors[i%6]);
+		graphic.fillRect(x, y, (x - 100), (y - 100));
+		i++;
+	}
+}
+
+private int getRandom(int max value) {
+	//generate random number
+}

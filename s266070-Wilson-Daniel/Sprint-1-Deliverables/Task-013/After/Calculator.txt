@@ -1,0 +1,61 @@
+public class Calculator {
+	private ArrayList<Memento> operationHistory = new ArrayList<Memento>();
+	private int answer;
+	
+	public Calculator() {	}
+	
+	public int doOperation(int firstNum, String operation, int secondNum) {
+		if(operation == '+') {
+			answer = firstNum + secondNum;
+		}
+		else if(operation == '-') {
+			answer = firstNum - secondNum;
+		}
+		else if(operation == '*') {
+			answer = firstNum * secondNum;
+		}
+		else if(operation == '/') {
+			answer = firstNum / secondNum;
+		}
+		else {
+			System.out.println("Error")
+		}
+		
+		operationHistory.add(saveOperation(firstNum, secondNum, answer, operation));
+		
+		return answer;
+	}
+	
+	private Memento saveOperation(int firstNum, int secondNum, int answer, String operation) {
+		return new Memento(firstNum, secondNum, answer, operation);
+	}
+	
+	public int undo() {
+		answer = operationHistory.get((operationHistory.size - 2)).getAnswer();
+		operationHistory.remove((operationHistory.size - 1));
+		return answer;
+	}
+	
+	public ArrayList getHistory() {
+		ArrayList<String> equations = new ArrayList<String>()
+		int i = 0;
+		
+		while (i < operationHistory.size()) {
+			equations.add(operationHistory.get(i).getEquation);
+			i++;
+		}
+		
+		return equations;
+	}
+	public void clearCalcMemory() {
+		operationHistory.clear();
+	}
+	
+	public String getLastEquation() {
+		return operationHistory.get((operationHistory.size - 1)).getEquation();
+	}
+	public int getLastAnswer() {
+		return operationHistory.get((operationHistory.size - 1)).getAnswer();
+	}
+
+}

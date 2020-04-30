@@ -1,0 +1,28 @@
+//Assume all set values are from parsed user input
+
+public static void Main() {
+	Calculator calc = new Calculator();
+	int result;
+	
+	result = calc.doOperation(10, '+', 5);
+	system.out.println("10 + 5 = " + result.toString());
+	
+	int temp = result;
+	result = calc.doOperation(result, '+', 20);
+	system.out.println(temp.toString() + " + 20 = " + result.toString());
+	
+	temp = result;
+	result = calc.doOperation(result, '-', 10);
+	system.out.println(temp.toString() + " - 10 = " + result.toString());
+	
+	result = calc.doOperation(10, '+', 5);
+	system.out.println("10 + 5 = " + result.toString());
+	
+	temp = result;
+	result = calc.doOperation(result, '+', 20);
+	system.out.println(temp.toString() + " + 20 = " + result.toString());
+	
+	temp = result;
+	result = calc.doOperation(result, '/', 10);
+	system.out.println(temp.toString() + " / 10 = " + result.toString());
+}
