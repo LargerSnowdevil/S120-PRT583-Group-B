@@ -1,0 +1,10 @@
+public class FileConnection
+{
+  public static FileConnection getInstance(){
+   return new FileConnection();
+  }
+
+  private FileConnection(){
+   super();
+  }
+}
