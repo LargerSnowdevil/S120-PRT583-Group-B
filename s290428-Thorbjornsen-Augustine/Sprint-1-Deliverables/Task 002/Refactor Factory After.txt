@@ -1,0 +1,12 @@
+class Cake
+{
+  public static Cake CreateCake()
+  {
+    return new Cake();
+  }
+
+  private Cake()
+  {
+    // instance initialisation
+  }
+}
