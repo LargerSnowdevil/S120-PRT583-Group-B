@@ -1,0 +1,14 @@
+After:
+
+class food
+      sauce()
+      toppings()
+
+
+class create burger(inherits food)
+      patty()
+      burgerbun()
+
+class create hotdog(inherits food)
+      sausage()
+      hotDogBun()

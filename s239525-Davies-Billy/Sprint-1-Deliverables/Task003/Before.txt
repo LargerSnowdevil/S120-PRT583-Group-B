@@ -1,0 +1,14 @@
+Before:
+
+class create burger:
+        burgerbun()
+        patty()
+        sauce()
+        toppings()
+
+
+class create hotDog()
+        hotDogBun()
+        sausage()
+        sauce()
+        toppings()

@@ -1,0 +1,38 @@
+After:
+
+def pizzarestaurantFactory:
+
+      def restaurantCreation(restaurantName):
+                self.restaurantFactory = restaurantName
+
+      def restaurantDetails:
+                print "Name of restaurant is Name"
+
+class pizzarestaurant1:
+        def name:
+            return darwin pizza
+        def employees:
+            return 50
+        def delivers:
+            delivery = yes
+
+class pizzarestaurant2:
+        def name:
+            return palmerston pizza
+        def employees:
+            return 25
+        def delivers:
+            delivery = yes
+
+class pizzarestaurant3:
+        def name:
+            return coolalinga pizza
+        def employees:
+            return 15
+        def delivers:
+            delivery = no
+
+
+#CREATE THE OBJECTS
+
+restaurant = pizzarestaurantFactory(pizzarestaurant1)
