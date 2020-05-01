@@ -1,0 +1,8 @@
+public interface TVState {
+  togglePower();
+  toggleMute();
+  volumeUp();
+  volumeDown();
+  channelUp();
+  channelDown();
+}

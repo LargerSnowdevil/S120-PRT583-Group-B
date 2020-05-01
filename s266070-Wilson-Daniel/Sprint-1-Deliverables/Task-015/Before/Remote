@@ -1,0 +1,54 @@
+public class Remote {
+  boolean TVOn;
+  boolean muted;
+  int volume;
+  int channel;
+
+  public Remote() {
+    TVOn = false;
+    muted = false;
+    volume = 5;
+    channel = 1;
+  }
+
+  public togglePower() {
+    if (TVOn) {
+      //send tv off signal
+      TVOn = false;
+    } else {
+      //send tv on signal
+      TVOn = true;
+    }
+  }
+
+  public toggleMute() {
+    if (muted) {
+      //send unmute signal
+      muted = false;
+    } else {
+      //send mute signal
+      muted = true;
+    }
+  }
+  public volumeUp() {
+    if (volume < 10) {
+      //send volume up signal
+      volume++;
+    }
+  }
+  public volumeDown() {
+    if (volume > 0) {
+      //send volume down signal
+      volume--;
+    }
+  }
+
+  public channelUp() {
+    //send channl up signal
+    channel++;
+  }
+  public channelDown() {
+    //send cannel down signal
+    channel--;
+  }
+}

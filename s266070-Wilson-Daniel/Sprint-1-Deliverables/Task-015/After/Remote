@@ -1,0 +1,54 @@
+public class Remote {
+  TVState powerOn;
+  TVState powerOff;
+
+  TVState tvState;
+
+  boolean TVOn;
+  boolean muted;
+  int volume;
+  int channel;
+
+  public Remote() {
+    TVOn = false;
+    muted = false;
+    volume = 5;
+    channel = 1;
+
+    powerOn = new TVOn(this);
+    powerOff = new TVOff(this);
+
+    tvState = powerOff;
+  }
+  public void setTVState(TVState state) {
+    tvState = state;
+  }
+
+  public togglePower() {
+    tvState.togglePower();
+  }
+
+  public toggleMute() {
+    tvState.toggleMute();
+  }
+  public volumeUp() {
+    tvState.volumeUp();
+  }
+  public volumeDown() {
+    tvState.volumeDown();
+  }
+
+  public channelUp() {
+    tvState.channelUp();
+  }
+  public channelDown() {
+    tvState.channelDown();
+  }
+
+  public TVState getOnState() {
+    return powerOn;
+  }
+  public TVState getOffState() {
+    return powerOff;
+  }
+}

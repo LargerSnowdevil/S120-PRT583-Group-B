@@ -1,0 +1,20 @@
+public class TVOn implements TVState {
+  Remote remote
+
+  public TVOn(Remote remote) {
+    this.remote = remote;
+  }
+
+  public togglePower() {
+    //send tv on signal
+    remote.TVOn = true;
+    remote.setTVState(remote.getOnState());
+  }
+
+  public toggleMute() {}
+  public volumeUp() {}
+  public volumeDown() {}
+
+  public channelUp() {}
+  public channelDown() {}
+}
