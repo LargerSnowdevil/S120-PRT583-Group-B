@@ -1,0 +1,37 @@
+//The component interface defines operations that can be altered by decorators.
+
+interface BaseDecorator is
+    method writeNotifier(message)
+    method sendNotifier():message
+
+class BaseDecorator implements Notifier is
+    selected field wrappee: BaseDecorator
+
+    constructor BaseDecoratorDecorator(source: BaseDecorator) is
+        wrappee = Notifier
+
+    method sendNotifier():message is
+        return wrappee.sendNotifier()
+
+    method GetNotifier():message is
+        app.GetNotifier(Stack)
+
+
+    method SetNotifier():message is
+        app.SetNotifier(Stack)
+
+class Application is
+    method dumbUsageExample() is
+	stack = new Notifier()
+
+    method FacebookNotifier():message is
+	stack = new FacebookDecorator(stack)
+        return wrappee.FacebookDecorator()
+
+    method SMSNotifier():message is
+	stack = new SMSDecorator(stack)
+        return wrappee.SMSDecorator()
+
+     method SlackNotifier():message is
+	stack = new SlackDecorator(stack)
+        return wrappee.SlackDecorator()	
