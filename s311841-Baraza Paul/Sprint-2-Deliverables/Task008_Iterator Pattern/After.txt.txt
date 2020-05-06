@@ -1,0 +1,11 @@
+Procedure Search(Tree,TargetItem)
+if (root pointer of Tree = NIL)
+   (Declare the search a failure)
+else (execute the block of instractions below that is associated with the appropriate case)
+    case1: TargetItem = item of root node 
+	(Report that the search succeeded)
+    case 2: TargetItem < item of root node
+	(Apply the procedure Search to see if TargetItem is the subtree identified by the 	roots left child pointer and report the result of the search)
+    case 3: TargetItem > item of root node
+	(Apply the procedure Search to see if TargetItem is the subtree identified by the 		roots right child pointer and report the result of the search)
+    )end if

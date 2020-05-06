@@ -1,0 +1,9 @@
+Procedure Search(TargetItem)
+if (pointer = NIL)
+   (Declare the search a failure)
+if 
+    TargetItem = new item node 
+    (Report that the search succeeded)
+if 
+    TargetItem != new item node 
+    getNext().
