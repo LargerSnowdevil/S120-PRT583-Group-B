@@ -1,3 +1,4 @@
+
 public interface Cake {
    void bake();
 }
@@ -16,19 +17,69 @@ public class Vanilla implements Cake {
    }
 }
 
+public class ToppedChocolate implements Cake {
+
+   public void bake() {
+
+   }
+}
+
+public class ToppedVanilla implements Cake {
+
+   public void bake() {
+
+   }
+}
+
+
+public class CakeFactory(string CakeType)  {
+  public Cake getCake(String cakeType){  
+      if(cakeType.equalsIgnoreCase("Chocolate")){
+         return new Chocolate();         
+      }else if(cakeType.equalsIgnoreCase("Vanilla")){
+         return new vanilla();
+      }	 
+      return null;
+   }
+}
+
+public class ToppedCakeFactory(string CakeType) {
+
+   public Cake getCake(String cakeType){    
+      if(cakeType.equalsIgnoreCase("Chocolate")){
+         return new ToppedChocolate();         
+      }else if(cakeType.equalsIgnoreCase("Vanilla")){
+         return new ToppedVanilla();
+      }	 
+      return null;
+   }
+}
+
+
 
 
 public class BakeCake {
    public static void main(String[] args) {
 
-      Chocolate chocolateCake = Chocolate();
-    
-      chocolateCake bake();
-   
-      Vanilla vanillaCake = vanillaCake();
+      CakeFactory cakeFactory = CakeFactory();
 
-      vanillaCake bake();
+      Cake cake1 = cakeFactory.getCake("Chocolate");
 
+      cake1.bake();
+
+      Cake cake2 = cakeFactory.getCake("Vanilla");
+
+      cake2.bake();
+
+      ToppedCakeFactory cakeFactory1 = ToppedCakeFactory();
+
+      Cake cake3 = cakeFactory1.getCake("Chocolate");
+
+      cake3.bake();
+
+      Cake cake4 = cakeFactory1.getCake("Vanilla");
+
+      cake4.bake();
       
    }
 }
