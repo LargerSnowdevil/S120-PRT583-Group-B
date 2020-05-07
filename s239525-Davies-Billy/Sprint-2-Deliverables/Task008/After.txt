@@ -1,0 +1,33 @@
+After:
+
+
+Class Engine():
+  function start engine:
+        Turn engine on
+  function stop engine:
+        Turn engine off
+
+Class Ignition():
+        function turn key:
+                Turn Key
+
+Class brake Pedal Check():
+          function check pedal:
+                  if on:
+                      return true:
+                  else:
+                      return false:
+
+
+class car():
+      car engine = new Engine
+      car ignition = new Ignition
+
+      function start car():
+              car ignition.turn key
+              car engine.start engine
+
+
+new car = car()
+#start the car
+car.start car

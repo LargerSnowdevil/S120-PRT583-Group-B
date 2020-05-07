@@ -1,0 +1,21 @@
+Before:
+
+Class Engine():
+  function start engine:
+        Turn engine on
+  function stop engine:
+        Turn engine off
+
+Class Ignition():
+        function turn key:
+                Turn Key
+
+Class brake Pedal Check():
+          function check pedal:
+                  if on:
+                      return true:
+                  else:
+                      return false:
+
+Ignition()
+Engine()
