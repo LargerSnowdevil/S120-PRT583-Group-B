@@ -1,0 +1,17 @@
+
+After:
+
+Class databaseconnect():
+        def openConnection():
+              #Returns the connection that already exists or creates a new one
+              if databaseconnect instance does not exist
+                          databaseconnection()
+              return databaseconnection()
+        #Ran when initializing object
+        def initializer():
+                if class doesnt have 0 instances
+                        error class cannot have more than one instance
+                else:
+                      instance = new instance
+
+connection = databaseconnect().openConnection

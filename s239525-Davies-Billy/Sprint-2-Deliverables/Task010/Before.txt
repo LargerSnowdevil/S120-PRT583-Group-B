@@ -1,0 +1,7 @@
+Before:
+Class databaseconnect():
+        def openConnection():
+              return databaseconnection()
+
+
+connection = databaseconnect().openConnection
