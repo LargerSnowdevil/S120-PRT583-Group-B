@@ -1,0 +1,20 @@
+
+public Chain clone()  {
+    return super.clone();
+  }
+
+public class MetalChain {
+
+  MetalChain metalChain = new MetalChain(this.getStrength(), this.getLength());
+   return metalChain;
+
+}
+
+public class ChainPrototype extends MetalChain implements Cloneable{
+
+    public void main(){
+        MetalChain metalChain1 = new PlasticChain(strength, length);
+        MetalChain metalChain2 = (Chain) metalChain1.clone();
+
+    }
+}

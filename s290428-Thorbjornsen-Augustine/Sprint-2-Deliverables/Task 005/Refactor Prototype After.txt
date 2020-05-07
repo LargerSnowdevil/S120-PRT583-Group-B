@@ -1,0 +1,23 @@
+public abstract class Chain {
+    public abstract Chain copy();
+
+}
+
+
+public class MetalChain extends Chain {
+
+    public Chain copy() {
+        MetalChain metalChain = new MetalChain(this.getStrength(), this.getLength());
+        return metalChain;
+    }
+}
+
+public class ChainPrototype {
+
+    public void main(){
+        MetalChain metalChain = new PlasticChain(strength, length);
+
+        MetalChain metalChainCopy = (MetalChain) metalChain.copy();
+
+    }
+}
