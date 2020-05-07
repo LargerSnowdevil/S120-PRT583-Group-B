@@ -17,27 +17,17 @@ public class Vanilla implements Cake {
 }
 
 
-public class CakeFactory {
-   public static CakeFactory getFactory(string cakeType){   
-      if(cakeType.equalsIgnoreCase("Chocolate")){
-         return new ChocolateCakeFactory();         
-      }else if(cakeType.equalsIgnoreCase("vanilla")) {
-         return new VanillaCakeFactory();
-      }
-      return null;
-   }
-}
 
 public class BakeCake {
    public static void main(String[] args) {
 
-      CakeFactory CakeFactory = CakeFactory.getFactory(Vanilla);
+      Chocolate chocolateCake = Chocolate();
     
-      CakeFactory bake();
+      chocolateCake bake();
    
-      CakeFactory CakeFactory1 = CakeFactory.getFactory(chocolate);
+      Vanilla vanillaCake = vanillaCake();
 
-      CakeFactory1 bake();
+      vanillaCake bake();
 
       
    }
