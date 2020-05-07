@@ -1,0 +1,12 @@
+procedure MergeFiles (input FileA, InputFileB, OutputFile)
+if (both input files at end-of-file (EOF)) then (stopwith outputFile empty)
+if (InputFileA not at EOF) then (Decleare its record to be its current record)
+if (inputFileB not at EOF) then (Declere its first record to be its current record)
+while (neither input file at EOF) do
+    (put the current record with the smaller key field value in OutputFile;
+    if (that current record is the last record in its corresponding input file)
+	then(Declare that input file to be at EOF)
+    	else(Declare the next record in that input file to be the file's current record)
+    )
+Starting with the current record in the input file that is not at EOF,
+copy the remaining records to OutputFile

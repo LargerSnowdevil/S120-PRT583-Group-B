@@ -1,0 +1,2 @@
+While (the EOF has not been reached)
+    do (retieve the next record from the file and process it)
