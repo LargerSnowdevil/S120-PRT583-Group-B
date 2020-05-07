@@ -1,0 +1,18 @@
+public class Finance implements Link {
+  private Link nextLink;
+
+  public void nextLink(Link nextLink) {
+    this.nextLink = nextLink;
+  }
+  public void solveProblem(Problem problem) {
+    if (problem.getCat == 'Finance') {
+      if (problem.getDesc == 'more money needed') {
+        //fix problem
+      } else if (problem.getDesc == 'employee given raise') {
+        //fix problem
+      }
+    } else {
+      nextLink.solveProblem(problem);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+public class Problem {
+  private String problemCatagory;
+  private String problemDescription;
+  private ProblemData problem;
+
+  public Problem(String catagory, String desc, ProblemData problem) {
+    problemCatagory = catagory;
+    problemDescription = desc;
+    this.problem = problem;
+  }
+
+  public String getCat() {
+    return problemCatagory;
+  }
+  public String getDesc() {
+    return problemDescription;
+  }
+  public ProblemData getData() {
+    return problem;
+  }
+}

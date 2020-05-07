@@ -1,0 +1,4 @@
+public interface Link {
+  public void nextLink(Link nextLink);
+  public void solveProblem(Problem problem);
+}

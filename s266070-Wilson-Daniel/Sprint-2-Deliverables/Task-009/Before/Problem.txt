@@ -1,0 +1,49 @@
+public class Problem {
+  private String problemCatagory;
+  private String problemDescription;
+  private ProblemData problem;
+
+  public Problem(String catagory, String desc, ProblemData problem) {
+    problemCatagory = catagory;
+    problemDescription = desc;
+    this.problem = problem;
+  }
+
+  public void solveProblem() {
+    if (catagory == 'Maintenace') {
+      if (problemDescription == 'door broken') {
+        //fix problem
+      } else if (problemDescription == 'water leak') {
+        //fix problem
+      }
+    }
+    else if (catagory == 'IT') {
+      if (problemDescription == 'computer broken') {
+        //fix problem
+      } else if (problemDescription == 'forgoten password') {
+        //fix problem
+      }
+    }
+    else if (catagory == 'HR') {
+      if (problemDescription == 'staff complaint') {
+        //fix problem
+      } else if (problemDescription == 'not enough manpower') {
+        //fix problem
+      }
+    }
+    else if (catagory == 'Finance') {
+      if (problemDescription == 'more money needed') {
+        //fix problem
+      } else if (problemDescription == 'employee given raise') {
+        //fix problem
+      }
+    }
+    else if (catagory == 'Marketing') {
+      if (problemDescription == 'need to run adds') {
+        //fix problem
+      } else if (problemDescription == 'want to sponser football team') {
+        //fix problem
+      }
+    }
+  }
+}

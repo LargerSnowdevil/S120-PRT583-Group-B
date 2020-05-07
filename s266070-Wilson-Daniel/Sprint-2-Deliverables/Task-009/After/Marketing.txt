@@ -1,0 +1,18 @@
+public class Marketing implements Link {
+  private Link nextLink;
+
+  public void nextLink(Link nextLink) {
+    this.nextLink = nextLink;
+  }
+  public void solveProblem(Problem problem) {
+    if (problem.getCat == 'Marketing') {
+      if (problem.getDesc == 'need to run adds') {
+        //fix problem
+      } else if (problem.getDesc == 'want to sponcer football team') {
+        //fix problem
+      }
+    } else {
+      nextLink.solveProblem(problem);
+    }
+  }
+}

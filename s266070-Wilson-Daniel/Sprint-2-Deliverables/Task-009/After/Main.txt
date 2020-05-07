@@ -1,0 +1,17 @@
+public static void Main() {
+  Link link1 = new Finance();
+  Link link2 = new HR();
+  Link link3 = new IT();
+  Link link4 = new Maintenace();
+  Link link5 = new Marketing();
+
+  link1.nextLink(link2);
+  link2.nextLink(link3);
+  link3.nextLink(link4);
+  link4.nextLink(link5);
+
+  ProblemData data = new ProblemData('detailed description of problem and any relivent infomation');
+  Problem prob = new Problem('IT', 'forgoten password', data);
+
+  link1.solveProblem(prob);
+}

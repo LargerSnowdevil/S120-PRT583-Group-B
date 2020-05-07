@@ -1,0 +1,18 @@
+public class IT implements Link {
+  private Link nextLink;
+
+  public void nextLink(Link nextLink) {
+    this.nextLink = nextLink;
+  }
+  public void solveProblem(Problem problem) {
+    if (problem.getCat == 'IT') {
+      if (problem.getDesc == 'computer broken') {
+        //fix problem
+      } else if (problem.getDesc == 'forgotten password') {
+        //fix problem
+      }
+    } else {
+      nextLink.solveProblem(problem);
+    }
+  }
+}

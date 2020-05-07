@@ -1,0 +1,18 @@
+public class HR implements Link {
+  private Link nextLink;
+
+  public void nextLink(Link nextLink) {
+    this.nextLink = nextLink;
+  }
+  public void solveProblem(Problem problem) {
+    if (problem.getCat == 'HR') {
+      if (problem.getDesc == 'staff complaint') {
+        //fix problem
+      } else if (problem.getDesc == 'not enough manpower') {
+        //fix problem
+      }
+    } else {
+      nextLink.solveProblem(problem);
+    }
+  }
+}

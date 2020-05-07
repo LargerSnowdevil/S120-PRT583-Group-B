@@ -1,0 +1,6 @@
+public static void Main() {
+  ProblemData data = new ProblemData('detailed description of problem and any relivent infomation');
+  Problem prob = new Problem('IT', 'forgoten password', data);
+
+  prob.solveProblem();
+}

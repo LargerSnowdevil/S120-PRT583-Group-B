@@ -1,0 +1,18 @@
+public class Maintenace implements Link {
+  private Link nextLink;
+
+  public void nextLink(Link nextLink) {
+    this.nextLink = nextLink;
+  }
+  public void solveProblem(Problem problem) {
+    if (problem.getCat == 'Maintenace') {
+      if (problem.getDesc == 'door broken') {
+        //fix problem
+      } else if (problem.getDesc == 'water leak') {
+        //fix problem
+      }
+    } else {
+      nextLink.solveProblem(problem);
+    }
+  }
+}
