@@ -1,0 +1,18 @@
+public class RaceCar extends Car {
+  private String partList = 'Super high performace engine, Super brakes, Turbocharger';
+  private double cost = 150000000.00;
+
+  public String getPartList() {
+    reurn partList;
+  }
+  public void setPartList(String partList) {
+    this.partList = partList
+  }
+
+  public double getPrice() {
+    return cost;
+  }
+  public void setPrice(double price) {
+    cost = price;
+  }
+}

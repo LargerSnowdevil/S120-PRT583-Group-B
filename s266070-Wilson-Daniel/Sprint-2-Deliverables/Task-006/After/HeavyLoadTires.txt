@@ -1,0 +1,12 @@
+public class HeavyLoadTires extends Decorator {
+  public HaevyLoadTires(Car car) {
+    super(car);
+  }
+
+  public String getPartList() {
+    return car.getPartList + ', Heavy load tires';
+  }
+  public double getPrice() {
+    return car.getPrice + 8000;
+  }
+}

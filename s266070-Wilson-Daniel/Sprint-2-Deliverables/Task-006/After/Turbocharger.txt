@@ -1,0 +1,12 @@
+public class Turbocharger extends Decorator {
+  public Turbocharger(Car car) {
+    super(car);
+  }
+
+  public String getPartList() {
+    return car.getPartList + ', Turbocharger';
+  }
+  public double getPrice() {
+    return car.getPrice + 26000;
+  }
+}

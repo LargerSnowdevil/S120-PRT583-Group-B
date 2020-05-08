@@ -1,0 +1,18 @@
+public class MovingVan extends Car {
+  private String partList = 'Heavy duty engine, Heavey load tires, Heavy duty brakes';
+  private double cost = 28000;
+
+  public String getPartList() {
+    reurn partList;
+  }
+  public void setPartList(String partList) {
+    this.partList = partList
+  }
+
+  public double getPrice() {
+    return cost;
+  }
+  public void setPrice(double price) {
+    cost = price;
+  }
+}

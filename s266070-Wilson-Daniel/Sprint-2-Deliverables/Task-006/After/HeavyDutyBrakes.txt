@@ -1,0 +1,12 @@
+public class HeavyDutyBrakes extends Decorator {
+  public HeavyDutyBrakes(Car car) {
+    super(car);
+  }
+
+  public String getPartList() {
+    return car.getPartList + ', Haevy duty brakes';
+  }
+  public double getPrice() {
+    return car.getPrice + 8000;
+  }
+}

@@ -1,0 +1,12 @@
+public class SuperHighPerformanceEngine extends Decorator {
+  public SuperHighPerformanceEngine(Car car) {
+    super(car);
+  }
+
+  public String getPartList() {
+    return car.getPartList + ', Super high performance engine';
+  }
+  public double getPrice() {
+    return car.getPrice + 130000;
+  }
+}

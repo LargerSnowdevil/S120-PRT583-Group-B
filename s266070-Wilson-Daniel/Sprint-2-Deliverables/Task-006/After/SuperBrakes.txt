@@ -1,0 +1,12 @@
+public class SuperBrakes extends Decorator {
+  public SuperBrakes(Car car) {
+    super(car);
+  }
+
+  public String getPartList() {
+    return car.getPartList + ', Super brakes';
+  }
+  public double getPrice() {
+    return car.getPrice + 19000;
+  }
+}

@@ -1,0 +1,14 @@
+abstract class Decorator implements Car {
+  protected Car car;
+
+  public Decorator(Car car) {
+    this.car = car;
+  }
+
+  public String getPartList() {
+    return car.getPartList();
+  }
+  public double getPrice() {
+    return car.getPrice();
+  }
+}

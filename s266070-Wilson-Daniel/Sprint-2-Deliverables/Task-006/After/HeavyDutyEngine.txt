@@ -1,0 +1,12 @@
+public class HeavyDutyEngine extends Decorator {
+  public HeavyDutyEngine(Car car) {
+    super(car);
+  }
+
+  public String getPartList() {
+    return car.getPartList + ', Heavy duty engine';
+  }
+  public double getPrice() {
+    return car.getPrice + 15000;
+  }
+}

@@ -1,0 +1,7 @@
+public abstract class Car {
+  public abstract getPartList();
+  public abstract setPartList(String partList);
+
+  public abstract getPrice();
+  public abstract setPrice(double price);
+}
