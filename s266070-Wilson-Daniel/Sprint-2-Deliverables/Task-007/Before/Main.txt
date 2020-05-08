@@ -1,0 +1,17 @@
+public static void Main() {
+  Database database = new Database('database location');
+  Checker check = new Checker();
+  Manipulator manip = new Manipulator();
+
+  DatabaseConnection connection = database.databaseConnect();
+  if (check.checkConnection(connection)) {
+    String request = 'some code to run'
+    if (check.checkRequest(request)) {
+      Results results = database.run(connection);
+      if (check.checkResults(results)) {
+        manip.populateResults(results);
+      }
+    }
+  }
+  database.databaseDisconnect(connection);
+}

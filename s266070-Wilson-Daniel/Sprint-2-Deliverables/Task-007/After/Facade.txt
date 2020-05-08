@@ -1,0 +1,22 @@
+public class Facade {
+  public Facade() {
+
+  }
+
+  public void populateResults(String databaseLocation, String request) {
+    Database database = new Database(databaseLocation);
+    Checker check = new Checker();
+    Manipulator manip = new Manipulator();
+
+    DatabaseConnection connection = database.databaseConnect();
+    if (check.checkConnection(connection)) {
+      if (check.checkRequest(request)) {
+        Results results = database.run(connection);
+        if (check.checkResults(results)) {
+          manip.populateResults(results);
+        }
+      }
+    }
+    database.databaseDisconnect(connection);
+  }
+}

@@ -1,0 +1,9 @@
+public class Manipulator {
+  public Manipulator() {
+
+  }
+
+  public void populateResults(Results results) {
+    //put results into GUI componants
+  }
+}

@@ -1,0 +1,15 @@
+public class Checker {
+  public Checker() {
+
+  }
+
+  public boolean checkConnection(DatabaseConnection connection) {
+    //check if database connection valid
+  }
+  public boolean checkResults(Results results) {
+    //check returned results are valid
+  }
+  public boolean checkRequest(String request) {
+    //check snytax of request
+  }
+}

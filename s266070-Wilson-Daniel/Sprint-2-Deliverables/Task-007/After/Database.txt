@@ -1,0 +1,18 @@
+public class Database {
+  String databaseLocation;
+
+  public Database(String databaseLocation) {
+    this.databaseLocation = databaseLocation;
+  }
+
+  public DatabaseConnection databaseConnect() {
+    //connect to database and return connection object
+  }
+  public void databaseDisconnect(DatabaseConnection connection) {
+    //close database connection
+  }
+
+  public Results run(DatabaseConnection connection, String request) {
+    // execute requested code in database
+  }
+}

@@ -1,0 +1,8 @@
+public static void Main() {
+  String databaseLocation = 'database location'
+  String request = 'some code to run'
+
+  Facade facade = new Facade();
+
+  facade.populateResults(databaseLocation, request);
+}
