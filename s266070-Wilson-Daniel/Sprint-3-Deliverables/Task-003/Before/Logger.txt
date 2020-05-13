@@ -1,0 +1,18 @@
+public class Logger {
+  public Logger() {
+
+  }
+
+  public void writeToLog(String message) {
+    //write message to log file
+  }
+  public void logError(String message, Exception ex) {
+    //write message and exception info to log file
+  }
+  public void log(String message) {
+    //write basic runtime info to log file
+  }
+  public void log() {
+    //write basic runtime info to log file
+  }
+}

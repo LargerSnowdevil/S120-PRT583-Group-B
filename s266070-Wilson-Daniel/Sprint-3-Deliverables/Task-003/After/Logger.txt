@@ -1,0 +1,27 @@
+public class Logger {
+  private static Logger loggerInstance = null;
+
+  private Logger() {
+    
+  }
+
+  public static Logger getInstance() {
+    if (loggerInstance == null) {
+      loggerInstance = new Logger();
+    }
+    return loggerInstance;
+  }
+
+  public void writeToLog(String message) {
+    //write message to log file
+  }
+  public void logError(String message, Exception ex) {
+    //write message and exception info to log file
+  }
+  public void log(String message) {
+    //write basic runtime info to log file
+  }
+  public void log() {
+    //write basic runtime info to log file
+  }
+}
