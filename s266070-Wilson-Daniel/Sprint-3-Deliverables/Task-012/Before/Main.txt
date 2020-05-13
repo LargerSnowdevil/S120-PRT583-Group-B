@@ -1,0 +1,44 @@
+public static void Main() {
+  Airplane plane1 = new Airplane("QF836");
+  Airplane plane2 = new Airplane("AA6629");
+  Airplane plane3 = new Airplane("TL213");
+  Airplane plane4 = new Airplane("MU4233");
+
+  HashMap<String, Airplane> traffic = new HashMap<String, Airplane>();
+  traffic.put(plane1.getFlightNumber, plane1);
+  traffic.put(plane2.getFlightNumber, plane2);
+  traffic.put(plane3.getFlightNumber, plane3);
+  traffic.put(plane4.getFlightNumber, plane4);
+
+  boolean landed = false;
+  while (!landed) {
+    landed = plane1.attemptLanding(traffic);
+    if (landed) {
+      traffic.remove(plane1.getFlightNumber);
+    }
+  }
+
+  landed = false;
+  while (!landed) {
+    landed = plane3.attemptLanding(traffic);
+    if (landed) {
+      traffic.remove(plane3.getFlightNumber);
+    }
+  }
+
+  landed = false;
+  while (!landed) {
+    landed = plane2.attemptLanding(traffic);
+    if (landed) {
+      traffic.remove(plane2.getFlightNumber);
+    }
+  }
+
+  landed = false;
+  while (!landed) {
+    landed = plane4.attemptLanding(traffic);
+    if (landed) {
+      traffic.remove(plane4.getFlightNumber);
+    }
+  }
+}

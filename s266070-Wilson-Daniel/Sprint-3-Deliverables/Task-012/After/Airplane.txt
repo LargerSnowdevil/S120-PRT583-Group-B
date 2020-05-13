@@ -1,0 +1,21 @@
+public class Airplane {
+  private String flightNumber;
+  boolean usingRunway = false;
+
+  public Airplane(String flightNumber) {
+    this.flightNumber = flightNumber;
+  }
+
+  private void land() {
+    usingRunway = true;
+    //complete landing
+    usingRunway = false;
+  }
+
+  public String getFlightNumber() {
+    return flightNumber;
+  }
+  public boolean isUsingRunway() {
+    return usingRunway;
+  }
+}

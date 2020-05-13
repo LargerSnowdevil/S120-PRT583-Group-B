@@ -1,0 +1,18 @@
+public static void Main() {
+  ControlTower tower = new ControlTower();
+
+  Airplane plane1 = new Airplane("QF836");
+  Airplane plane2 = new Airplane("AA6629");
+  Airplane plane3 = new Airplane("TL213");
+  Airplane plane4 = new Airplane("MU4233");
+
+  tower.addTraffic(plane1);
+  tower.addTraffic(plane2);
+  tower.addTraffic(plane3);
+  tower.addTraffic(plane4);
+
+  tower.attemptLanding(plane1.getFlightNumber);
+  tower.attemptLanding(plane3.getFlightNumber);
+  tower.attemptLanding(plane2.getFlightNumber);
+  tower.attemptLanding(plane4.getFlightNumber);
+}

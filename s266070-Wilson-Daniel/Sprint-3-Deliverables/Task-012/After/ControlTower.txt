@@ -1,0 +1,29 @@
+public class ControlTower implements Mediator {
+  HashMap<String, Airplane> traffic;
+
+  public ControlTower() {
+    traffic = new HashMap<String, Airplane>();
+  }
+  public boolean attemptLanding(String flightNumber) {
+    Airplane landingPlane = traffic.get(flightNumber);
+    boolean canLand = true;
+    boolean landing = false;
+
+    while (!landed) {
+      for (Airplane plane : traffic) {
+        if (plane.isUsingRunway) {
+          canLand = false
+        }
+      }
+      if (canLand) {
+        landing = true;
+        landingPlane.land();
+        traffic.remove(landingPlane.getFlightNumber());
+      }
+    }
+  }
+
+  public void addTraffic(Airplane plane) {
+    traffic.put(plane.getFlightNumber, plane);
+  }
+}

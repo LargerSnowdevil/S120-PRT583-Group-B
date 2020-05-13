@@ -1,0 +1,33 @@
+public class Airplane {
+  private String flightNumber;
+  boolean usingRunway = false;
+
+  public Airplane(String flightNumber) {
+    this.flightNumber = flightNumber;
+  }
+
+  public boolean attemptLanding(ArrayList traffic) {
+    boolean canLand = true;
+    for (Airplane plane : traffic) {
+      if (plane.isUsingRunway) {
+        canLand = false;
+      }
+    }
+    if (canLand) {
+      land();
+    }
+    return canLand;
+  }
+  private void land() {
+    usingRunway = true;
+    //complete landing
+    usingRunway = false;
+  }
+
+  public String getFlightNumber() {
+    return flightNumber;
+  }
+  public boolean isUsingRunway() {
+    return usingRunway;
+  }
+}
