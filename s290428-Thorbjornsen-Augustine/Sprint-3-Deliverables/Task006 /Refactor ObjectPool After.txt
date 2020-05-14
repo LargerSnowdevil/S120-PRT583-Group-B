@@ -1,0 +1,46 @@
+public class FirstObject
+{            
+    public FirstObject()
+    {
+        
+    }                    
+    public virtual void DoWork()
+    {
+        Console.WriteLine("First Object working...");
+    }
+}
+
+
+
+public class SecondObject : FirstObject
+{
+    public SecondObject()
+    {
+
+    }
+    public override void DoWork()
+    {
+        Console.WriteLine("Second Object working...");
+    }
+}
+
+
+class Adaptor
+{
+    private FirstObject _firstObject;
+    public Adaptor
+    {
+        _firstObject = new FirstObject();
+    }
+    public virtual void DoWork()
+    {
+        _firstObject.DoWork();
+    }
+}
+
+main(){
+
+Adapter adapter = new Adapter();
+
+adapter.DoWork();
+}
