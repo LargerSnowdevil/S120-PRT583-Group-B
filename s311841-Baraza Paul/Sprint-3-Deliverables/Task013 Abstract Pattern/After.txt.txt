@@ -1,0 +1,73 @@
+interface GUIFactory is
+    method createMouse(): Mouse
+    method createKeyboard(): Keyboard
+
+class AndroidDevice implements GUIFactory is
+    method createMouse(): Mouse is
+        return new AndroidMouse()
+    method createKeyboard(): Keyboard is
+        return new AndroidKeyboard()
+
+class WindowsDevice implements GUIFactory is
+    method createMouse(): Mouse is
+        return new WindowsMouse()
+    method createKeyboard(): Keyboard is
+        return new WindowsKeyboard()
+
+class iOSDevice implements GUIFactory is
+    method createMouse(): Mouse is
+        return new iOSMouse()
+    method createKeyboard(): Keyboard is
+        return new iOSKeyboard()
+
+interface Mouse is
+    method createUI()
+
+class WindowsMouse implements Mouse is
+    method createUI() is
+        // Render a Mouse controller in Windows style.
+
+class iOSMouse implements Mouse is
+    method createUI() is
+        // Render a Mouse controller in iOS style.
+
+class AndroidMouse implements Mouse is
+    method createUI() is
+        // Render a Mouse controller in Android style.
+
+interface Keyboard is
+    method createUI()
+
+class AndroidKeyboard implements Keyboard is
+    method createUI() is
+        // Render a Keyboard controller in Android style.
+
+class WindowsKeyboard implements Keyboard is
+    method createUI() is
+        // Render a Keyboard controller in Windows style.
+
+class iOSKeyboard implements Keyboard is
+    method createUI() is
+        // Render a Keyboard controller in iOs style.
+
+class Controller is
+    private field factory: GUIFactory
+    private field mouse: Mouse
+    constructor Controller(factory: GUIFactory) is
+        this.factory = factory
+    method createUI() is
+        this.mouse = factory.createMouse()
+
+class ControllerConfigurator is
+    method main() is
+        config = readControllerConfigFile()
+        if (config.OS == "Windows") then
+            factory = new WindowsDevice()
+        else if (config.OS == "iOS") then
+            factory = new iOSDevice()
+	else if (config.OS == "Android") then
+            factory = new AndroidDevice()
+        else
+            throw new Exception("Error! Unknown operating system.")
+
+        Controller app = new Controller(factory)
