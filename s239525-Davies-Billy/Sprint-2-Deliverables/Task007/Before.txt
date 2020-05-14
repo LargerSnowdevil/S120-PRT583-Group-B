@@ -1,0 +1,14 @@
+Before:
+
+
+Class house:
+          #has 4 walls a roof a door and 1 floor as properties
+class house with 2 floors(inherits from house):
+          #has 4 walls a roof a door and 2 floor as properties
+
+
+class house with 2 floors and a metal door(inherits from house with 2 floors):
+          #has 4 walls a roof , metal doors and 2 floor as properties
+
+class house with 2 floors and a wooden door(inherits from house with 2 floors):
+          #has 4 walls a roof , wooden doors and 2 floor as properties

@@ -1,15 +1,64 @@
 Understanding the Concept:
-
+Lets you add new functionality to an object. The pattern wraps the original class
+in decorator class providing additional functionality.
 Intent:
+This program is made to let a user design their perfect house , you can pick the basic house but picking
+any other style of house requires the creation of another object. Adding new houses is also more complex
+as you need to create new classes and it becomes difficult to maintain.
 
 Problem:
+Difficult to maintain code
+If the program had 20 different kinds of houses then there are 20 different classes to maintain
+What if you had a house with metal doors as an option but also a house with metal doors and wooden walls.
+The amount of inheritence would quickly become confusing with all the options
 
 Benefits\Motivation to Refactor:
 
-Time Quoted:
+Make the code easier to read
+Make the code easier to maintain
+Make it easier to add new houses
 
-Time Taken:
+Time Quoted: 1 hours
+
+Time Taken: 2 hours
 
 Before:
 
+
+Class house:
+          #has 4 walls a roof a door and 1 floor as properties
+class house with 2 floors(inherits from house):
+          #has 4 walls a roof a door and 2 floor as properties
+
+
+class house with 2 floors and a metal door(inherits from house with 2 floors):
+          #has 4 walls a roof , metal doors and 2 floor as properties
+
+class house with 2 floors and a wooden door(inherits from house with 2 floors):
+          #has 4 walls a roof , wooden doors and 2 floor as properties
+
+
 After:
+
+
+Class house:
+            Define the default house there
+
+
+Class decorator(inherits house):
+            #something to maintain a reference to the house object
+            self.house = house
+
+class decoratorHouseTwoFloors(inherits decorator):
+            #here we would specify the traits of the this decorator
+
+class decoratorHouseTwoFloors(inherits decorator):
+            #here we would specify the traits of the this decorator
+class decoratorHouseTwoFloorsAndWoodenDoor(inherits decorator):
+            #here we would specify the traits of the this decorator
+class decoratorHouseTwoFloorsAndMetalDoor(inherits decorator):
+            #here we would specify the traits of the this decorator
+
+
+#creating a house object with a decorator
+HouseChoice = HOUSE(decoratorHouseTwoFloors)
