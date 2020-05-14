@@ -1,0 +1,41 @@
+class TVSet is
+
+class TVManual is
+
+    // The reset method clears the object being built.
+    method reset() is
+        this.tv = new TV()
+
+    // All production steps work with the same product instance.
+    method setScreenSize(...) is
+        // Set the screen size.
+
+    method setSerialNumber(...) is
+        // allocate serial number.
+
+    method getProduct():TV is
+        product = this.tv
+        this.reset()
+        return product
+
+    method constructUHDLED(builder: Builder) is
+        builder.reset()
+        builder.setScreenSize(75,LED)
+        builder.setSerialNumber(digits(15))
+        builder.setMotherBoard(UHD)
+        builder.setHousing(colour,type)
+
+    method makeOLED4K(builder: Builder) is
+        // ...
+    method makeQLED4K(builder: Builder) is
+        // ...	
+	
+class Application is
+
+    method makeTV() is
+        brandDesign = new BrandDesign()
+        brandDesign.makeUHDLED()
+	brandDesign.makeOLED4K()
+	brandDesign.makeQLED4K()
+
+        Manual manual = BrandDesign.getProduct()
