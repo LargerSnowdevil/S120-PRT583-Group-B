@@ -1,0 +1,84 @@
+Understanding the Concept:
+State is a design pattern which allows an object to change itself based on its internal state.
+
+Intent:
+Refactor a computers on/off/hibernate/sleep logic so that it checks for state instead of being
+a large amount of if statements
+
+Problem:
+A large amount of if statements can be hard to read and a nightmate to make changes to
+Benefits\Motivation to Refactor:
+Easier to read
+Easier to add new states
+
+
+Time Quoted: 1 hour
+
+Time Taken: 1 hour
+
+Before:
+
+class computer():
+
+          state = computerState()
+
+class computerState():
+
+          If power is on
+                computer is on
+          else if power is on and computer inactive
+                computer is hibernating
+          else if power is on and computer set to sleep
+                computer is sleeping
+          else if power is off
+                computer is turned off
+
+        return result of if statements
+
+
+After:
+
+
+Class ComputerState():
+
+            def switchState():
+                      ""
+                      Logic to control switching the state to the prompted state
+                      and returning it to the computer object would go here
+                      ""
+
+Class Off(ComputerState):
+        ""
+        Logic which when called on an object would switch it to off
+        ""
+        Return off
+Class On(ComputerState):
+        ""
+        Logic which when called on an object would switch it to on
+        ""
+        return on
+Class Sleep(ComputerState):
+        ""
+        Logic which when called on an object would switch it to sleep
+        ""
+        return sleep
+Class Hibernate(ComputerState):
+        ""
+        Logic which when called on an object would switch it to hibernate
+        ""
+        return Hibernate
+
+Class Computer():
+          def init:
+                  #Give the computer object some properties one of them being its states
+                  self.state = off #default state would be off
+
+          def SwitchState(state):
+                    #change to the state used when calling this function
+                    self.state = switchstate(state)
+
+
+newPc = Computer() #default state is Off
+
+newPc.SwitchState(On) #switched to on
+newPc.SwitchState(sleep) #switched to sleep

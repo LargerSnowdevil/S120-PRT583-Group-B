@@ -1,0 +1,46 @@
+After:
+
+
+Class ComputerState():
+
+            def switchState():
+                      ""
+                      Logic to control switching the state to the prompted state
+                      and returning it to the computer object would go here
+                      ""
+
+Class Off(ComputerState):
+        ""
+        Logic which when called on an object would switch it to off
+        ""
+        Return off
+Class On(ComputerState):
+        ""
+        Logic which when called on an object would switch it to on
+        ""
+        return on
+Class Sleep(ComputerState):
+        ""
+        Logic which when called on an object would switch it to sleep
+        ""
+        return sleep
+Class Hibernate(ComputerState):
+        ""
+        Logic which when called on an object would switch it to hibernate
+        ""
+        return Hibernate
+
+Class Computer():
+          def init:
+                  #Give the computer object some properties one of them being its states
+                  self.state = off #default state would be off
+
+          def SwitchState(state):
+                    #change to the state used when calling this function
+                    self.state = switchstate(state)
+
+
+newPc = Computer() #default state is Off
+
+newPc.SwitchState(On) #switched to on
+newPc.SwitchState(sleep) #switched to sleep

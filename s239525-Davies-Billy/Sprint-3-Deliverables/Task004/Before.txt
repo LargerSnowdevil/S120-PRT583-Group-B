@@ -1,0 +1,16 @@
+class computer():
+
+          state = computerState()
+
+class computerState():
+
+          If power is on
+                computer is on
+          else if power is on and computer inactive
+                computer is hibernating
+          else if power is on and computer set to sleep
+                computer is sleeping
+          else if power is off
+                computer is turned off
+
+        return result of if statements
