@@ -1,7 +1,0 @@
-class Cake
-{
-  public Cake()
-  {
-    // instance initialisation
-  }
-}
