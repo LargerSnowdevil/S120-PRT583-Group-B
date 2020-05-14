@@ -1,0 +1,60 @@
+class AndroidDevice implements GUIFactory is
+    method createMouse(): Mouse is
+        return new AndroidMouse()
+    method createKeyboard(): Keyboard is
+        return new AndroidKeyboard()
+
+class WindowsDevice implements GUIFactory is
+    method createMouse(): Mouse is
+        return new WindowsMouse()
+    method createKeyboard(): Keyboard is
+        return new WindowsKeyboard()
+
+MockInterface Mouse is
+    method createUI()
+
+// derive(Clone) to inherit  to different user interfaces
+class iOSDevice Mock is
+    method let mock = mockMouse(): Mouse is
+        mock.returniOSMouse()
+	assert_eq(mock.iOSMouse()), Err("Unknown operating system"))
+	// mocks a Mouse controller in iOS style.
+
+    method let mock = mockKeyboard(): Keyboard is
+        mock.returniOSKeyboard()
+	assert_eq(mock.iOSKeyboard()), Err("Unknown operating system"))
+	// mocks a Keyboard controller in iOS style.
+
+class WindowsDevice Mock is
+    method let mock = mockMouse(): Mouse is
+        mock.returnWindowsDevice
+	assert_eq(mock.WindowsDevice()), Err("Unknown operating system"))
+	// mocks a mouse controller in Windows style.
+
+    method let mock = mockKeyboard(): Keyboard is
+        mock.returnWindowsKeyboard()
+	assert_eq(mock.WindowsKeyboard()), Err("Unknown operating system"))
+	// mocks a Keyboard controller in Windows style.
+
+class AndroidDevice Mock is
+    method let mock = mockMouse(): Mouse is
+        mock.returnAndroidDevice
+	assert_eq(mock.AndroidDevice()), Err("Unknown operating system"))
+	// mocks a mouse controller in Android style.
+
+    method let mock = mockKeyboard(): Keyboard is
+        mock.returnAndroidKeyboard()
+	assert_eq(mock.AndroidKeyboard()), Err("Unknown operating system"))
+	// mocks a Keyboard controller in Android style.
+
+class ControllerConfigurator is
+    method main() is
+        config = readControllerConfigFile()
+        if (config.OS == "Windows") then
+            assert_eq(mock.WindowsKeyboard())
+        else if (config.OS == "iOS") then
+            assert_eq(mock.iOSKeyboard())
+	else if (config.OS == "Android") then
+            assert_eq(mock.AndroidDevice())
+        else
+            throw new Exception("Error! Unknown operating system.")
