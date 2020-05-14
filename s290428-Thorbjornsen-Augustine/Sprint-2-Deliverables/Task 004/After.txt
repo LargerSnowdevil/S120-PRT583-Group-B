@@ -1,0 +1,96 @@
+public interface Cake {
+   void bake();
+}
+
+
+public class Chocolate implements Cake {
+
+   public void bake() {
+  
+   }
+}
+public class Vanilla implements Cake {
+
+   public void bake() {
+  
+   }
+}
+
+public class ToppedChocolate implements Cake {
+
+   public void bake() {
+
+   }
+}
+
+public class ToppedVanilla implements Cake {
+
+   public void bake() {
+
+   }
+}
+
+public abstract class AbstractFactory {
+   abstract Cake getCake(String CakeType) ;
+}
+
+
+public class CakeFactory extends AbstractFactory {
+
+   public Cake getCake(String cakeType){    
+      if(cakeType.equalsIgnoreCase("Chocolate")){
+         return new Chocolate();         
+      }else if(cakeType.equalsIgnoreCase("Vanilla")){
+         return new vanilla();
+      }	 
+      return null;
+   }
+}
+
+public class ToppingsCakeFactory extends AbstractFactory {
+   public Cake getCake(String cakeType){    
+      if(cakeType.equalsIgnoreCase("Chocolate")){
+         return new ToppedChocolate();         
+      }else if(cakeType.equalsIgnoreCase("Vanilla")){
+         return new ToppedVanilla();
+      }	 
+      return null;
+   }
+}
+
+
+public class FactoryProducer {
+   public static AbstractFactory getFactory(boolean toppings){   
+      if(toppings){
+         return new ToppingsCakeFactory();         
+      }else{
+         return new CakeFactory();
+      }
+   }
+}
+
+public class BakeCake {
+   public static void main(String[] args) {
+
+      AbstractFactory cakeFactory = FactoryProducer.getFactory(false);
+
+      Cake cake1 = cakeFactory.getCake("Chocolate");
+
+      cake1.bake();
+
+      Cake cake2 = cakeFactory.getCake("Vanilla");
+
+      cake2.bake();
+
+      AbstractFactory cakeFactory1 = FactoryProducer.getFactory(true);
+
+      Cake cake3 = cakeFactory1.getCake("Chocolate");
+
+      cake3.bake();
+
+      Cake cake4 = cakeFactory1.getCake("Vanilla");
+
+      cake4.bake();
+      
+   }
+}
