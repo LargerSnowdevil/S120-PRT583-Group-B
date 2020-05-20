@@ -1,0 +1,39 @@
+public interface Car {
+
+	public void assemble();
+}
+
+public class BasicCar implements Car {
+
+	@Override
+	public void assemble() {
+		System.out.print("Basic Car.");
+	}
+
+}
+
+public class SportsCar extends BasicCar{
+
+	public SportsCar(Car c) {
+		super(c);
+	}
+
+	@Override
+	public void assemble(){
+		super.assemble();
+		System.out.print(" Adding features of Sports Car.");
+	}
+}
+
+public class LuxuryCar extends BasicCar {
+
+	public LuxuryCar(Car c) {
+		super(c);
+	}
+	
+	@Override
+	public void assemble(){
+		super.assemble();
+		System.out.print(" Adding features of Luxury Car.");
+	}
+}
