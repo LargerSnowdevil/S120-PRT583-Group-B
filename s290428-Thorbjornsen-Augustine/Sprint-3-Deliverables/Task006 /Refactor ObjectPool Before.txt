@@ -1,0 +1,37 @@
+public class FirstObject
+{            
+    public FirstObject()
+    {
+        
+    }                    
+    public virtual void DoWork()
+    {
+        Console.WriteLine("First object Working...");
+    }
+}
+
+
+
+public class SecondObject 
+{
+    public SecondObject()
+    {
+
+    }
+    public override void DoWork()
+    {
+        Console.WriteLine("Second object Working...");
+    }
+}
+
+
+
+main(){
+FirstObject first = new FirstObject();
+
+first.DoWork();
+
+SecondObject second = new SecondObject();
+
+second.DoWork();
+}

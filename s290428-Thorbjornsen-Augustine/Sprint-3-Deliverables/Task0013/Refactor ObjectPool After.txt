@@ -1,0 +1,101 @@
+class Student {
+     private id;
+     private name;       
+
+     public function construct(id, name) {
+          this.id = id;
+          this.name = name;
+     }
+
+     public function getId() {
+          return this.id;
+     }
+
+     public function getName() {
+          return this.name;
+     }
+
+     public function getInfo()
+     {
+          echo "ID = " . this.id . "; Name = " . this.name;
+     }
+     
+}
+
+class StudentPool
+{
+     private busyStudents;
+     private freeStudents;
+     private names = [ 'Billy', 'Daniel', 'Guzzi', 'Paul' ];
+
+     public function construct()
+     {
+          this.busyStudents = [];
+          this.freeStudents = [];
+     }
+
+     public function getStudent()
+     {
+          if (this.freeStudents == 0)
+          {
+              student = new Student(id, this.names[randomName]);
+          }
+          else
+          {
+              student = arrayPop(this.freeStudents);
+          }
+          this.busyStudents[student.getId()] = student;
+          
+          return student;
+     }
+
+     public function release(student)
+     {
+          id = student.getId();
+
+          if (isset(this.busyStudents[id]))
+          {
+               unset(this.busyStudents[id]);
+               this.freeStudents[id] = student;
+          }
+     }
+
+     public function getBusyStudents()
+     {
+          students = '(Empty)';
+
+          if (busyStudents.count > 0) {
+               foreach (busyStudents as student)
+               {
+                    students = students.student.getName();
+               }
+          }
+
+          return students;
+     }
+
+     public function getFreeStudents()
+     {
+          students = '(Empty)';
+
+          if (freeStudents.count > 0) {
+               foreach (freeStudents as student)
+               {
+                    students = students.student.getName();
+               }
+          }
+
+          return students;
+     }
+}
+
+
+main(){
+pool = new StudentPool();
+
+student1 = pool.getStudent();
+
+echo "Student 1: "student1.getInfo()";
+echo "List of busy students: "pool.getBusyStudents()";
+echo "List of free students: "pool.getFreeStudents()";
+}

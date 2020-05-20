@@ -1,0 +1,56 @@
+class Student {
+     private id;
+     private name; 
+     private busyStudents;
+     private freeStudents;
+     private names = [ 'Billy', 'Daniel', 'Guzzi', 'Paul' ];
+
+     public function construct(id, name) {
+          this.id = id;
+          this.name = name;
+     }
+
+     public function getId() {
+          return this.id;
+     }
+
+     public function getName() {
+          return this.name;
+     }
+
+     public function getInfo()
+     {
+           "ID = " . this.id . "; Name = " . this.name;
+     }
+     
+     public function getStudent()
+     {
+     return students;
+     }
+     
+     public function getFreeStudents()
+     {
+     this.freeStudents = ['Guzzi', 'Paul'];
+          return freeStudents;
+     }
+     
+     public function getBusyStudents()
+     {
+     this.busyStudents = ['Billy', 'Daniel'];
+          return busyStudents;
+     }
+}
+
+
+
+main(){
+
+student = new Student();
+
+student1 = new Student(id, this.names[randomName]);
+
+echo "Student 1: "student1.getInfo()";
+echo "List of occupied students: " student.getBusyStudents()";
+echo "List of free students: " student.getFreeStudents()";
+
+}
