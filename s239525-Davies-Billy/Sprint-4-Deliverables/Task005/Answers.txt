@@ -1,0 +1,26 @@
+Understanding the Concept:
+Proxy is a structural design pattern designed to allow you to give access to an object
+without allowing direct access to that object. This lets you do some action or check on
+whatever the request to that object may be before it reaches the object itself.
+This can be helpful for properly securing your software and allowing to have access
+to an object without creating it, potentially using less resources.
+
+Intent:
+Provide a proxy for a database object so that when a new request comes in that's
+when the object is created. Otherwise its always there and consuming resources .
+
+
+Problem:
+Object is always there consuming system resources even when not needed
+If the object consumes a lot of resources this can be costly.
+
+
+
+Benefits\Motivation to Refactor:
+Reduce system resource usage
+Provide a way an object can be accessible without being created.
+Can delete object when its done being used.
+
+Time Quoted: 45 mins
+
+Time Taken: 1 hour

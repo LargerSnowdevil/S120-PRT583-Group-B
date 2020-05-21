@@ -1,0 +1,15 @@
+Before:
+
+class database():
+"""
+Contains all the logic and operations of a database
+clients directly interact with this database
+
+"""
+    updatetable():
+              #logic for updating table goes here
+
+
+Ourdatabase = database()
+
+ourdatabase.updatetable(SomeData)

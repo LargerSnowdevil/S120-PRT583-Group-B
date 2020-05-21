@@ -1,0 +1,50 @@
+After:
+
+class databaseInterface():
+          """
+          This interface defines all the logic and operations
+          that are expected in the database and any proxies
+          """
+          updatetable():
+                    #logic for updating table goes here
+
+class database(databaseInterface):
+          """
+          Contains all the logic and operations of a database
+          clients directly interact with this database
+          must follow the interface
+
+          """
+          updatetable(table):
+                    #logic for updating table goes here
+
+
+class proxyDatabase(databaseInterface):
+          """
+          This is the proxy interface for the database
+          and is identical to an actual database object
+
+          """
+          #initialize the proxy with an actual database object
+          def __init__(self):
+                realDatabase = database()
+
+          def handleRequest(self):
+                """
+                Here we check if we have created a database Object
+                and send the requests to the database object with the
+                relevant function
+                """
+                def checkAccess(self):
+                        check if realDatabase is initialized
+                        error if it is not
+                def updatetable(table):
+                      #Uses the function of the real database object
+                      realDatabase.updatetable(table)
+                      return "Success"
+
+
+
+newdatabase = proxyDatabase
+
+proxyDatabase.updatetable(SomeData)#will use the proxy database to update the database if possible
