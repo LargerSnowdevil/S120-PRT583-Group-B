@@ -1,0 +1,35 @@
+class CircleScreen is
+    constructor CircleScreen(radius) { ... }
+
+    method getRadius() is
+        // Return the radius of the screen.
+
+    method fits(shape: TargetShape) is
+        return this.getRadius() >= shape.radius()
+
+class TargetShape is
+    constructor TargetShape(radius) { ... }
+
+    method getRadius() is
+        // Return the radius of the shape.
+
+class ShapeCreater is
+    constructor ShapeCreater(width) { ... }
+
+    method getWidth() is
+        // Return the shape created width.
+class ShapeAdapter extends TargetShape is
+
+    private field shape: ShapeCreater
+
+    method getRadius() is
+        return shape.getWidth() * Math.sqrt(2) / 2
+
+success = number of fits
+hole = new CircleScreen(6)
+rshape = new TargetShape(6)
+success.fits(rshape) // true
+
+small_sshape = new ShapeCreater(6)
+large_sshape = new ShapeCreater(12)
+hole.fits(small_sshape) // this won't compile (incompatible types)
