@@ -1,0 +1,31 @@
+class skinsType is
+    field name
+    field color
+    field design
+    constructor skinsType(name, color, design) { ... }
+    method draw(canvas, x, y) is
+class skinsFactory is
+    static field skinsTypes: collection of skins types
+    static method getskinsType(name, color, design) is
+        type = skinTypes.find(name, color, design)
+        if (type == null)
+            type = new skinsType(name, color, design)
+            skinsTypes.add(type)
+        return type
+class skins is
+    field x,y
+    field type: skinsType
+    constructor skin(x, y, type) { ... }
+    method draw(canvas) is
+        type.draw(canvas, this.x, this.y)
+class character is
+    field skins: collection of skins
+
+    method chooseSkin(x, y, name, color, design) is
+        type = skinsFactory.getskinsType(name, color, design)
+        skins = new skins(x, y, type)
+        skins.add(skins)
+
+    method draw(canvas) is
+        foreach (skins in skins) do
+            skins.draw(canvas)

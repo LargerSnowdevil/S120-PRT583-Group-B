@@ -1,0 +1,31 @@
+class character is
+    field name
+    field color
+    field design
+    constructor skinType(name, color, design) { ... }
+    method draw(canvas, x, y) is
+class skin1 is
+    field x,y
+    field type: skinType
+    constructor skin(x, y, type) { ... }
+    method draw(canvas) is
+        type.draw(canvas, this.x, this.y)
+class skin2 is
+    field x,y
+    field type: skinType
+    constructor skin(x, y, type) { ... }
+    method draw(canvas) is
+        type.draw(canvas, this.x, this.y)
+class character is
+    field skin: collection of skin design
+
+class platform is
+    field skin: collection of skins
+     method chooseSkin(skin1,skin2, {...},character) is
+        type = skin.getskincharacter(name, color, design)
+        skin = new skins(x, y, character)
+        skin.add(skin)
+
+    method draw(canvas) is
+        foreach (skin in platform) do
+            skin.draw(canvas)
