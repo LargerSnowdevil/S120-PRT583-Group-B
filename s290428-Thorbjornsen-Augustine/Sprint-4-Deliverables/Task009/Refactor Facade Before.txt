@@ -1,0 +1,70 @@
+public class FuelPump {
+    public void pump() {
+        LOGGER.info("Fuel Pump is pumping fuel..");
+    }
+}
+
+
+public class AirFlowMeter {
+
+
+    public void getMeasurements() {
+        LOGGER.info("Getting air measurements..");
+    }
+}
+
+public class FuelInjector {
+    private FuelPump fuelPump = new FuelPump();
+
+    public void on(){
+        LOGGER.info("Fuel injector ready to inject fuel.");
+    }
+
+    public void inject() {
+        fuelPump.pump();
+        LOGGER.info("Fuel injected.");
+    }
+
+    public void off() {
+        LOGGER.info("Stopping Fuel injector..");
+    }
+}
+
+public class AirFlowController {
+
+    private AirFlowMeter airFlowMeter = new AirFlowMeter();
+
+    public void takeAir() {
+        airFlowMeter.getMeasurements();
+        LOGGER.info("Air provided!");
+    }
+
+    public void off() {
+        LOGGER.info("Air controller switched off.");
+    }
+}
+
+public class Starter {
+
+    public void start() {
+        LOGGER.info("Starting..");
+    }
+}
+
+public class MAIN {
+    private FuelInjector fuelInjector = new FuelInjector();
+    private AirFlowController airFlowController = new AirFlowController();
+    private Starter starter = new Starter();
+
+//start the car sequence
+        fuelInjector.on();
+        airFlowController.takeAir();
+        fuelInjector.on();
+        fuelInjector.inject();
+        starter.start();
+        
+//Stop the car sequence
+        fuelInjector.off();
+        airFlowController.off();
+
+}
