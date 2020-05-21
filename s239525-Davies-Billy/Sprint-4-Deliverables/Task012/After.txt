@@ -1,0 +1,45 @@
+After:
+Draw(ShapeName,Height, width):
+        """
+        A function which draws shapes on the screen. Takes in the name of the shape
+        and the height and width of the object
+        """
+
+
+Circle(Circumference):
+      """
+      Takes in the circumference of the circle then calculates the height and width of
+      the circle to draw then calls the draw functionto draw it with those values.
+      """
+
+      Draw("Circle",Height,Width)
+
+Triangle(Side,base):
+      """
+      Takes in the length of the side and base of a triangle and then
+      Converts it to a height and width for the draw function to use
+
+      """
+      Draw("Triangle",Height,Width)
+
+Square(LengthOfSide):
+      """
+      Old reused function that takes in the length of the side of a square
+      and returns the length multiplied by 4, wont work with the draw function
+      """
+      return  LengthOfSide * 4
+
+
+
+AdapterForSquare(LengthOfSide):
+      """
+      This adapter can convert the return of the square function
+      into something that the draw functioncan understand and make use of
+      """
+      height = square(LengthOfSide)
+      width = height
+      Draw(square,height,width)
+
+Triangle(10,10): #Will work
+Circle(30) # Will work
+AdapterForSquare(5) #Would now work with draw
