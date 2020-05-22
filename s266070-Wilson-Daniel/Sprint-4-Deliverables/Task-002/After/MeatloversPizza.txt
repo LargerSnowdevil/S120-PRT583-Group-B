@@ -1,0 +1,30 @@
+public class MeatloverPizza implements PizzaBuilder {
+  private Pizza pizza;
+
+  public MeatloverPizza() {
+    this.pizza = new Pizza();
+  }
+
+  public void addName() {
+    pizza.setName("Meatlover");
+  }
+  public void addBase() {
+    pizza.setBase("Plain Base");
+  }
+  public void addToppings() {
+    ArrayList toppings = new ArrayList();
+    toppings.add("BBQ Sauce");
+    toppings.add("Sausage");
+    toppings.add("Pepperoni");
+    toppings.add("Shredded Ham");
+    toppings.add("Cheese");
+
+    pizza.setToppings(toppings);
+  }
+  public void addPrice() {
+    pizza.setPrice(18.00);
+  }
+  public Pizza getPizza() {
+    return pizza;
+  }
+}

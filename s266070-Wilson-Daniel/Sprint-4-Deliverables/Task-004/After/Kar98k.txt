@@ -1,0 +1,33 @@
+public class Kar98k {
+  int ammo;
+
+  public Kar98k() {
+    ammo = 5;
+  }
+
+  public void fire() {
+    //fire
+  }
+  public void cycleBolt() {
+    //cycle bolt
+    //lower ammo count
+  }
+  public boolean sightTarget(Target target) {
+    //point gun at target
+    if (target.cansee) {
+      return true;
+    }
+    //stop pointing gun at target
+    return false;
+  }
+  public void rangeRifle(int range) {
+    //ajust sight for range
+  }
+  public void AjustForWindage() {
+    //ajust for wind effecting shot
+  }
+  public void reloadWeapon() {
+    //reload gun
+    ammo = 5;
+  }
+}

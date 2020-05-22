@@ -1,0 +1,16 @@
+public static void Main() {
+  String pizzaName = "Meatlover";
+
+  String pizzaBase = "Plain Base"
+
+  ArrayList PizzaToppings = new ArrayList();
+  toppings.add("BBQ Sauce");
+  toppings.add("Sausage");
+  toppings.add("Pepperoni");
+  toppings.add("Shredded Ham");
+  toppings.add("Cheese");
+
+  double pizzaPrice = 18.00;
+
+  Pizza meatlover = new Pizza(pizzaName, pizzaBase, PizzaToppings, pizzaPrice);
+}

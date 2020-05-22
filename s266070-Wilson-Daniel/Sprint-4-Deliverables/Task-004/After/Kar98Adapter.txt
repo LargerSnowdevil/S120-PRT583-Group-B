@@ -1,0 +1,22 @@
+public class Kar98Adapter implements Gun {
+  Kar98k rifle;
+
+  public Kar98Adapter(Kar98k rifle) {
+    this.rifle = rifle;
+  }
+  public void shoot() {
+    rifle.fire();
+    rifle.cycleBolt();
+  }
+  public boolean aimAt(Target target) {
+    if (rifle.sightTarget(target)) {
+      rifle.rangeRifle();
+      rifle.AjustForWindage();
+      return true;
+    }
+    return false;
+  }
+  public void reloadWeapon() {
+    rifle.reloadWeapon();
+  }
+}

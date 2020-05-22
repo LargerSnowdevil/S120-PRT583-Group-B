@@ -1,0 +1,7 @@
+public interface PizzaBuilder {
+  public void addName();
+  public void addBase();
+  public void addToppings();
+  public void addPrice();
+  public Pizza getPizza();
+}

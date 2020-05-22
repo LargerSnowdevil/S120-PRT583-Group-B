@@ -1,0 +1,5 @@
+public interface Gun {
+  public void shoot();
+  public boolean aimAt();
+  public void reloadWeapon();
+}

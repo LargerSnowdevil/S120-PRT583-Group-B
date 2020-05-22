@@ -1,0 +1,25 @@
+public class Kar98k implements Gun {
+  int ammo;
+
+  public Kar98k() {
+    ammo = 5;
+  }
+
+  public void shoot() {
+    //fire
+    //cycle bolt
+    //lower ammo count
+  }
+  public boolean aimAt(Target target) {
+    //point gun at target
+    if (target.canHit) {
+      return true;
+    }
+    //stop pointing gun at target
+    return false;
+  }
+  public void reloadWeapon() {
+    //reload gun
+    ammo = 5;
+  }
+}

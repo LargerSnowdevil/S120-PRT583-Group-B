@@ -1,0 +1,40 @@
+public class Pizza {
+  private String name;
+  private String Base;
+  private ArrayList toppings;
+  private double price;
+
+  public Pizza(){
+
+  }
+  public Pizza(String name) {
+    this.name = name;
+  }
+  public Pizza(String name, String base, ArrayList toppings, double price) {
+    this.name = name;
+    this.base = base;
+    this.toppings = toppings;
+    this.price = price;
+  }
+
+  public String getName() {
+    return name;
+  }
+  public String getBase() {
+    return base;
+  }
+  public String getToppings() {
+    if (!toppings == null) {
+      String forReturn = toppings.get(0);
+      int i = 1;
+      while (i < toppings.getLength) {
+        forReturn = forReturn + ", " + toppings.get(i);
+      }
+      return forReturn;
+    }
+    return "No Toppings"
+  }
+  public double getPrice() {
+    return price;
+  }
+}

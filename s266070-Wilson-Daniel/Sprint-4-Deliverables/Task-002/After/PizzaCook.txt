@@ -1,0 +1,17 @@
+public class PizzaCook {
+  private PizzaBuilder pizzaBuilder;
+
+  public PizzaCook(PizzaBuilder pizzaBuilder) {
+    this.pizzaBuilder = pizzaBuilder
+  }
+
+  public Pizza getPizza() {
+    return pizzaBuilder.getPizza();
+  }
+  public void makePizza() {
+    pizzaBuilder.addName();
+    pizzaBuilder.addBase();
+    pizzaBuilder.addToppings();
+    pizzaBuilder.addPrice();
+  }
+}
